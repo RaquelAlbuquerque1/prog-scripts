@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iframe</title>
+</head>
+
+<body>
+  <style>
+    li {
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function abrePag(pagina, idElemento) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("frame").innerHTML =
+            this.responseText;
+          console.log(this.responseText);
+        }
+      };
+      xhttp.open("GET", pagina, true);
+      xhttp.send();
+    }
+
+    function apareceDesaparece(id) {
+      var obj = document.getElementById(id);
+      var button = document.getElementById("verMenu");
+      if (obj.style.display != "block") {
+        obj.style.display = "block";
+        button.innerHTML = "Fechar menu";
+      }
+      else {
+        obj.style.display = "none";
+        button.innerHTML = "Ver menu";
+      }
+    }
+  </script>
+  <table width="60%" height="500px" align="center" cellspacing="0" cellpadding="5">
+    <tr bgcolor="lightyellow">
+      <th width="20%">
+        <img src="./assets/gato.webp" style="width: 100px; height: 80px" />
+      </th>
+      <th width="50%">Cabeçalho da Página</th>
+    </tr>
+
+    <tr align="left">
+      <td bgcolor="lightyellow">
+        <p id="verMenu" onclick="apareceDesaparece('menu')" style="cursor:pointer;">Fechar menu</p>
+        <div id="menu">
+          <h3>Menu</h3>
+          <ul>
+            <li onclick="abrePag('./exercs/lista.html', 'frame')">Listas</li>
+            <li onclick="abrePag('./exercs/tabela.html', 'frame')">Tabelas</li>
+            <li onclick="abrePag('./exercs/formatacao.html', 'frame')">Formatação</li>
+          </ul>
+        </div>
+      </td>
+      <td rowspan="2">
+        <div id="frame" width="100%" height="350px" style="overflow:auto"></div>
+      </td>
+    </tr>
+    <tr align="center" bgcolor="lightyellow">
+      <td width="20%">
+        <a href="https://www.fatecsaocaetano.edu.br/" target="_blank"><img src="./assets/fatec.png"
+            style="width: 100px; height: 80px" /></a>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

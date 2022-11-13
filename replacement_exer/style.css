@@ -1,0 +1,552 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+
+  color: white;
+  background: #0c0c0c;
+
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+
+  z-index: 999999;
+  margin-top: -70px;
+}
+
+header #img {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header #headerImage {
+  width: 300px;
+  height: 80px;
+
+  padding: 0 0 0 150px;
+}
+
+header #menu {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 250px 0 0;
+}
+
+header ul {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+  color: white;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul li a:hover {
+  color: #11fae7;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.slideshow-container {
+  min-width: 1000px;
+  position: relative;
+}
+
+.fade img {
+  min-height: 699px;
+  max-height: 700px;
+
+  opacity: 0.5;
+}
+
+#slide-text {
+  width: 1000px;
+  height: 400px;
+
+  background-color: rgba(111, 111, 111, 0.5);
+
+  z-index: 99999;
+
+  position: relative;
+
+  margin: -600px 0 100px 15%;
+
+  padding: 20px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide-text img {
+  width: 350px;
+  height: 350px;
+}
+
+#slide-text #slide-messages {
+  width: 100%;
+  height: 100%;
+
+  font-size: 30px;
+  color: white;
+
+  padding: 0 0 0 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+#slide-text #slide-messages p {
+  margin: 10px 0 0 0;
+}
+
+#slide-text #slide-messages span {
+  background: linear-gradient(87.25deg, #11fae7 0.34%, #9dffff 109.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 70px;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+#container section {
+  width: 100%;
+  min-height: 600px;
+
+  padding: 100px 0 0 0;
+}
+
+#container section h1 {
+  background: linear-gradient(87.25deg, #11fae7 0.34%, #9dffff 109.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 50px;
+}
+#container section #title {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  border-image-source: linear-gradient(
+    280.27deg,
+    rgba(181, 147, 82, 0) 28.31%,
+    #11fae7 64.62%
+  );
+
+  border-image-slice: 1;
+  background: linear-gradient(
+    70deg,
+    rgba(255, 255, 255, 0.05) 10.58%,
+    rgba(255, 255, 255, 0) 65.41%
+  );
+
+  padding: 10px 150px;
+}
+
+#container section #definition {
+  max-width: 100%;
+  height: max-content;
+
+  padding: 10px 150px;
+
+  font-size: 20px;
+  text-align: justify;
+}
+
+#cards-container {
+  width: 80%;
+  height: 100%;
+
+  padding: 0px 150px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 50px;
+
+  margin: 30px 1000px 0px 0px;
+}
+
+#card {
+  width: 200px;
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+#card #card-content {
+  padding: 10px 20px 10px 10px;
+
+  font-weight: bold;
+}
+
+#card:hover {
+  border: 2px solid;
+  border-image-source: linear-gradient(
+    87.25deg,
+    #11fae7 0.34%,
+    #9dffff 109.42%
+  );
+  border-image-slice: 1;
+
+  cursor: pointer;
+}
+
+#card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+}
+
+#card #classication {
+  width: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3px;
+
+  padding: 5px;
+
+  font-size: 20px;
+}
+
+#card #recomendation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 50px;
+}
+
+#modal-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+  width: 80%;
+  height: 500px;
+
+  background-color: #181818;
+
+  z-index: 999999;
+
+  display: none;
+  position: absolute;
+  margin: 800px 0 0 0;
+}
+
+#modal-content {
+  display: flex;
+  width: 100%;
+
+  align-items: flex-start;
+}
+
+#modal-content iframe {
+  min-width: 600px;
+  min-height: 500px;
+}
+
+#fechar {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  right: -15px;
+  top: -20px;
+
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+#movie-data {
+  display: flex;
+  flex-direction: column;
+
+  align-items: left;
+  justify-content: center;
+  text-align: justify;
+
+  padding: 0 20px 0 30px;
+}
+
+#movie-specifications span {
+  color: #777;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#button-contato {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 24px;
+  gap: 12px;
+  border: none;
+
+  width: 155px;
+  height: 50px;
+
+  background: linear-gradient(87.25deg, #11fdea 0.34%, #9dffff 109.42%);
+  border-radius: 2px;
+  color: black;
+
+  outline: none;
+
+  cursor: pointer;
+
+  margin: 0 0 0 50px;
+}
+
+#button-contato a {
+  outline: none;
+  text-decoration: none;
+
+  color: black;
+}
+
+#contato {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    275.17deg,
+    rgba(17, 253, 234, 0.12) -5.18%,
+    rgba(157, 255, 255, 0) 56.97%
+  );
+}
+
+#contato-image {
+  width: 50%;
+  height: max-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 40px 0 0;
+}
+
+#contato-image img {
+  width: 100%;
+}
+
+#contato-inputs {
+  width: 50%;
+
+  padding: 0 0 0 150px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#contato-inputs form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#box {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: black;
+
+  margin: 0 0 40px 0;
+
+  border-radius: 20px;
+}
+
+#box #contato-text h1 {
+  font-size: 30px;
+}
+
+#contato-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+#contato-inputs form {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+
+  margin: 0 20px 0 -50px;
+}
+
+#contato-inputs input,
+textarea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+
+  background: #0c0c0c;
+  border-radius: 4px;
+
+  border: 1px solid;
+
+  border-image-source: linear-gradient(
+    87.25deg,
+    #11fdea 0.34%,
+    #9dffff 109.42%
+  );
+
+  border-image-slice: 1;
+
+  outline: none;
+
+  color: white;
+}
+
+#contato-inputs label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  text-align: left;
+
+  background: linear-gradient(87.25deg, #11fdea 0.34%, #9dffff 109.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  padding: 20px 0 0 10px;
+}
+
+#button-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+
+  background: linear-gradient(87.25deg, #11fdea 0.34%, #9dffff 109.42%);
+  border-radius: 2px;
+  color: black;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+
+  margin: 20px 20px 0 -50px;
+}
+
+@media (max-width: 1024px) {
+  header #headerImage {
+    padding: 0 0 0 20px;
+  }
+
+  header #menu{
+    width: 50%;
+    padding: 0 20px 0 0;
+  }
+
+  .slideshow-container{
+    min-width: none;
+  }
+
+  #slide-text{
+    width: 80%;
+    height: 500px;
+    margin: -600px 0 0px 10%;
+    padding: 20px 0 20px 40px;
+  }
+
+  #slide-text #slide-messages{
+    padding: 0;
+  }
+
+  #slide-text img{
+    width: 300px;
+    height: 300px;
+  }
+
+  #contato-inputs{
+    padding: 0 0 0 130px;
+  }
+
+  #modal{
+    height: max-content;
+  }
+
+  #modal-content{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,89 @@
+body{
+font-family:arial;
+}
+
+#divTitulo{
+	background:lightyellow;
+	font-size:40px;
+	color:brown;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+
+}
+
+#divTitulo img{
+	height:80px;
+	width:80px;
+}
+
+#divMenu{
+	background:lightyellow;
+	float:left;
+	width:10%;
+	height:400px;
+	padding:10px;
+}
+
+#divMenu ul ul{
+	display:none;
+}	
+
+#divMenu li{
+	list-style:none;
+}
+
+#divConteudo{
+	background:brown;
+	color:lightyellow;	
+	padding:10px;
+}
+
+#divConteudo #produtos div{
+	display:flex;
+	gap:20px;
+
+	padding:20px;
+}
+
+#divConteudo #ofertas{
+	display:flex;
+	gap:20px;
+
+	padding:20px;
+}
+
+#divConteudo #card{
+	display:flex;
+	flex-direction:column;
+	gap:0px;
+	height:250px;
+}
+
+#divConteudo #card div{
+	display:flex;
+	flex-direction:column;
+	height:50px;
+
+	gap:10px;
+}
+
+#divConteudo #card h3, h4, h5{
+	padding:0;
+	margin:0;
+}
+
+#divConteudo #produtos h1{
+	background:lightyellow;
+	color:Brown;
+}
+
+#divRodape{
+	background:lightyellow;
+	color:brown;
+	float:left;
+	width:100%;
+}
+
+#divRodape #email{
+	float:right;
+}
+

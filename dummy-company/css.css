@@ -1,0 +1,174 @@
+body {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+#divTitulo {
+  background: #4682f9;
+  font-size: 40px;
+  color: #1c1c1c;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#divTitulo img {
+  height: 130px;
+  width: 150px;
+  margin: 0 30px 0 0;
+}
+
+#divMenu {
+  background: #4682f9;
+  float: left;
+  width: 15%;
+  height: 580px;
+  padding: 10px;
+}
+
+#divMenu ul {
+  margin: 20px 0 0 -30px;
+}
+
+#divMenu ul ul {
+  display: none;
+  margin: 10px 0 10px -20px;
+}
+
+#divMenu li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+#divMenu li a {
+  text-decoration: none;
+}
+
+#divConteudo {
+  background: #1c1c1c;
+  color: #4682f9;
+  padding: 10px 40px 10px 50px;
+  height: 580px;
+  overflow: scroll;
+
+  text-align: justify;
+  line-height: 20px;
+}
+
+#divConteudo #produtos h1 {
+  background: #4682f9;
+  color: #1c1c1c;
+  padding: 15px;
+}
+
+#divConteudo #produtos div {
+  flex-direction: column;
+  display: flex;
+
+  border: none;
+}
+
+#divConteudo #produtos div div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#divConteudo #produtos div div img {
+  width: 100%;
+  border-radius: 20px;
+  height: 200px;
+}
+
+#divConteudo #produtos div div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 300px;
+  border: 2px solid #4682f9;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+
+#divConteudo #produtos div div div div {
+  border: none;
+  max-width: 260px;
+}
+
+#divRodape {
+  background: #4682f9;
+  color: #1c1c1c;
+  float: left;
+  width: 100%;
+
+  padding: 30px 0 30px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#divRodape #email {
+  float: right;
+  padding: 0 30px;
+}
+
+#divConteudo #fornecedores {
+  display: flex;
+  flex-direction: column;
+}
+
+#fornecedores div {
+  display: flex;
+  gap: 20px;
+}
+
+#fornecedores div div {
+  display: flex;
+  flex-direction: column;
+}
+
+#divConteudo #produtos textarea {
+  min-width: 100%;
+}
+
+@media (max-width: 1023px) {
+  #divMenu {
+    min-width: 250px;
+  }
+
+  #divTitulo {
+    padding: 20px;
+  }
+
+  #divMenu li a {
+    font-size: 35px;
+  }
+
+  #divConteudo #produtos div div div div {
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 210px;
+  }
+
+  #divConteudo #produtos div div div {
+    width: 250px;
+  }
+
+  #divConteudo #produtos textarea {
+    max-width: 587px;
+  }
+
+  #divConteudo #contato {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  #divTitulo img {
+    height: 180px;
+    width: 200px;
+    margin: 20px 35px 20px 20px;
+  }
+}

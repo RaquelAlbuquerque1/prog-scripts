@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercício 22</title>
+
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+
+      margin: 15px 0 5px 0;
+    }
+
+    input {
+      min-width: 250px;
+      margin: 5px 0 0 0;
+    }
+
+    select {
+      min-width: 260px;
+    }
+
+    input[type="submit"] {
+      min-width: 260px;
+
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <label for="name">
+      Nome
+    </label>
+    <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo, por favor" required
+      maxlength="150" />
+
+    <label for="idade">
+      Idade
+    </label>
+    <input type="number" name="idade" placeholder="Insira sua idade, por favor" required min="22" />
+
+    <label for="sexo">
+      Sexo
+    </label>
+    <select name="sexo" required>
+      <option>Feminino</option>
+      <option>Masculino</option>
+    </select>
+
+    <label>
+      Data nascimento
+      <input type="number" name="dia" placeholder="Insira o dia, por favor" required min="1" max="31" />
+      <input type="text" name="mes" placeholder="Insira o mes por escrito, ex: janeiro" required />
+      <input type="number" name="ano" placeholder="Insira o ano, por favor" required />
+    </label>
+
+    <label for="cpf">
+      CPF
+    </label>
+    <input type="text" name="cpf" placeholder="Insira seu CPF, por favor" required minlength="11" maxlength="11" />
+
+    <label for="estadoCivil">
+      Estado Civil
+    </label>
+    <select name="estadoCivil" required>
+      <option>Solteiro</option>
+      <option>Casado</option>
+      <option>Viuvo</option>
+      <option>Divorciado</option>
+    </select>
+
+    <label for="email">
+      Email
+    </label>
+    <input type="email" name="email" placeholder="Insira seu email, por favor" required />
+    <div>
+      <input id="submit" type="submit">
+    </div>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
+</html>

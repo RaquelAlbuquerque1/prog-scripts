@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>NETMOVIES</title>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <a href="#inicio"> <img src="./assets/logo.png" id="headerImage" /> </a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="#action">Ação</a>
+                </li>
+                <li>
+                    <a href="#romance">Romance</a>
+                </li>
+                <li>
+                    <a href="#adventure">Aventura</a>
+                </li>
+            </ul>
+            <button id="button-contato">
+                <a href="#contato">Entre em contato</a>
+            </button>
+        </div>
+    </header>
+    <div id="container">
+        <div id="modal-container">
+            <div id="modal">
+                <button id="fechar" onclick="openAndCloseModal()">X</button>
+                <div id="modal-content">
+                    <iframe id="movie" src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <div id="movie-data">
+                        <h1 id="name"></h1>
+                        <p id="description"></p>
+                        <div id="movie-specifications">
+                            <p id="direction"></p>
+                            <p id="roadmapBy"></p>
+                            <p id="cast"></p>
+                            <p id="genre"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="inicio">
+            <div id="carousel">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./assets/filme_acao_1.webp" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./assets/filme_romance_1.webp" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./assets/filme_aventura_1.webp" style="width: 100%" />
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./assets/filme_comedia_1.jpeg" style="width: 100%" />
+                    </div>
+                </div>
+
+                <div id="slide-text">
+                    <div id="slide-messages">
+                        <h1>
+                            Assista ao que <span>quiser</span>, a hora que
+                            <span>desejar!</span>
+                        </h1>
+                        <p>
+                            Basta selecionar uma <span>categoria</span> e pôr o milho pra
+                            <span>estourar.</span>
+                        </p>
+                    </div>
+
+                    <img src="./assets/balde_pipoca.png" />
+                </div>
+                <div style="text-align: center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        <section id="action">
+            <div id="title">
+                <h1>Ação</h1>
+            </div>
+            <div id="definition">
+                <p>
+                    Um filme de ação é um gênero de filme que geralmente envolve uma
+                    história de protagonistas do bem contra antagonistas do mal, que
+                    resolvem suas disputas com o uso de força física, neles o bem sempre
+                    prevalece sobre o mal. Os filmes de ação são comuns de se misturarem
+                    com os gêneros policiais e crimes, westerns e guerra, entre outros.
+                </p>
+            </div>
+            <div id="cards-container">
+                <div id="card" onclick="openAndCloseModal(3)">
+                    <img src="./assets/filme_acao_4.jpg" />
+                    <div id="card-content">
+                        <p>Três ladrões e um bebê</p>
+                        <div id="recomendation">
+                            <div style="background-color: #2e88bc" id="classication">
+                                10
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(4)">
+                    <img src="./assets/filme_acao_5.jpg" />
+                    <div id="card-content">
+                        <p>Operação zodíaco</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(2)">
+                    <img src="./assets/filme_acao_3.jpeg" />
+                    <div id="card-content">
+                        <p>Os Especialistas</p>
+                        <div id="recomendation">
+                            <div style="background-color: #e7792b" id="classication">
+                                14
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(0)">
+                    <img src="./assets/filme_acao_1.webp" />
+                    <div id="card-content">
+                        <p>Contrato Perigoso</p>
+                        <div id="recomendation">
+                            <div style="background-color: #d7252d" id="classication">
+                                16
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(1)">
+                    <img src="./assets/filme_aca0_2.jpg" />
+                    <div id="card-content">
+                        <p>Vingança Fatal</p>
+                        <div id="recomendation">
+                            <div style="background-color: #d7252d" id="classication">
+                                16
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="romance">
+            <div id="title">
+                <h1>Romance</h1>
+            </div>
+            <div id="definition">
+                <p>
+                    Os filmes do gênero romance podem ser definidos como aqueles cujo
+                    enredo se desenvolve em torno de um envolvimento amoroso entre os
+                    protagonistas. Um dos pré-requisitos do gênero é de que o filme
+                    tenha um "final feliz"; contudo, alguns filmes com final triste
+                    também podem ser considerados filmes do gênero romântico.
+                </p>
+            </div>
+            <div id="cards-container">
+                <div id="card" onclick="openAndCloseModal(9)">
+                    <img src="./assets/filme_romance_5.jpeg" />
+                    <div id="card-content">
+                        <p>A Minha Garota Para Sempre</p>
+                        <div id="recomendation">
+                            <div style="background-color: #2e88bc" id="classication">
+                                10
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(6)">
+                    <img src="./assets/filme_romance_2.jpeg" />
+                    <div id="card-content">
+                        <p>A culpa é das estrelas</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(7)">
+                    <img src="./assets/filme_romance_3.jpeg" />
+                    <div id="card-content">
+                        <p>Antes que eu vá</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(8)">
+                    <img src="./assets/filme_romance_4.jpeg" />
+                    <div id="card-content">
+                        <p>Querido John</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card" onclick="openAndCloseModal(5)">
+                    <img src="./assets/filme_romance_1.webp" />
+                    <div id="card-content">
+                        <p>Ainda estou aqui</p>
+                        <div id="recomendation">
+                            <div style="background-color: #e7792b" id="classication">
+                                14
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="adventure">
+            <div id="title">
+                <h1>Aventura</h1>
+            </div>
+            <div id="definition">
+                <p>
+                    O filme de aventura é um gênero cinematográfico que pode ser
+                    caracterizado como uma história onde um herói enfrenta uma série de
+                    obstáculos, exibindo coragem ao enfrentar situações que fogem ao
+                    cotidiano.
+                </p>
+            </div>
+            <div id="cards-container">
+                <div id="card" onclick="openAndCloseModal(13)">
+                    <img src="./assets/filme_aventura_4.webp" />
+                    <div id="card-content">
+                        <p>Uma viagem extraordinária</p>
+                        <div id="recomendation">
+                            <div style="background-color: #2e88bc" id="classication">
+                                10
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(10)">
+                    <img src="./assets/filme_aventura_1.webp" />
+                    <div id="card-content">
+                        <p>Z - A cidade perdida</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(11)">
+                    <img src="./assets/filme_aventura_2.jpeg" />
+                    <div id="card-content">
+                        <p>A filha do rei</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" onclick="openAndCloseModal(12)">
+                    <img src="./assets/filme_aventura_3.jpeg" />
+                    <div id="card-content">
+                        <p>Jungle - Protegendo a selva</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card" onclick="openAndCloseModal(14)">
+                    <img src="./assets/filme_aventura_5.jpeg" />
+                    <div id="card-content">
+                        <p>Passagem para Marte</p>
+                        <div id="recomendation">
+                            <div style="background-color: #f6c727" id="classication">
+                                12
+                            </div>
+                            <p>⭐️⭐️⭐️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div id="box">
+                <div id="contato-text">
+                    <h1>Não achou o filme que estava procurando? :(</h1>
+                    <p>
+                        Deixe-o de sugestão aqui em baixo e lhe avisaremos quando
+                        adicionarmos ao nosso catálogo.
+                    </p>
+                </div>
+                <div id="contato-content">
+                    <div id="contato-inputs">
+                        <form>
+                            <label for="nome"> Nome </label>
+                            <input type="text" name="nome" placeholder="John Doe" />
+                            <label for="email"> Email </label>
+                            <input type="email" name="email" placeholder="email@email.com" />
+                            <label for="sugestion">Sugestão</label>
+
+                            <textarea id="sugestion" name="sugestion"
+                                placeholder="Deixa aqui o filme que você deseja sugerir"></textarea>
+                        </form>
+                        <button type="submit" id="button-form"
+                            onclick="alert('Agradecemos pela sugestão, enquanto não a incluimos, divirta-se com o que já temos em ctálogo :)'), window.location.reload()">
+                            Enviar
+                        </button>
+                    </div>
+                    <div id="contato-image">
+                        <img src="./assets/contact-us.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

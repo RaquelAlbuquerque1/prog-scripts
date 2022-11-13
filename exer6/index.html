@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+
+  <body>
+    <h1>Cadastro de interesse em cursos técnicos e palestras</h1>
+    <form name="form" method="GET">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label>
+          Nome
+          <input
+            type="text"
+            name="nome"
+            placeholder="Informe o nome completo"
+          /> </label
+        ><br /><br />
+
+        <label>
+          Endereço
+          <input
+            type="text"
+            name="endereco"
+            placeholder="Logradouro, número - complemento"
+          /> </label
+        ><br /><br />
+
+        <label>
+          Email
+          <input
+            type="text"
+            name="email"
+            placeholder="email@provedor.com.br"
+          /> </label
+        ><br /><br />
+
+        <label for="sexo">Sexo:</label>
+
+        <label> masculino <input type="radio" name="sexo" value="M" /></label>
+        <label> feminino <input type="radio" name="sexo" value="F" /></label
+        ><br /><br />
+
+        <label for="cars">Escolaridade</label>
+
+        <select name="escolaridade">
+          <option value="fi">Fundamental Incompleto</option>
+          <option value="fc">Fundamental Completo</option>
+          <option value="mi">Médio Incompleto</option>
+          <option value="mc">Médio Completo</option>
+          <option value="si">Superior Incompleto</option>
+          <option value="sc">Superior Completo</option>
+          <option value="pgi">Pós-Graduação Incompleto</option>
+          <option value="pgc">Pós-Graduação Completo</option></select
+        ><br /><br />
+
+        <label for="curriculo">Currículo resumido</label>
+        <br />
+        <textarea
+          name="curriculo"
+          cols="70"
+          rows="10"
+          placeholder="Informe um resumo do seu currículo"
+        ></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Área de interesse</legend>
+        <label
+          >Tecnologia da informação<input
+            type="checkbox"
+            name="area"
+            value="tecInfo"
+        /></label>
+        <label>Biologia<input type="checkbox" name="area" value="bio" /></label>
+        <label
+          >Comunicação<input type="checkbox" name="area" value="comunicacao"
+        /></label>
+        <label
+          >Meio Ambiente<input type="checkbox" name="area" value="meioAmb"
+        /></label>
+        <label
+          >Engenharia<input type="checkbox" name="area" value="engenharia"
+        /></label>
+        <label
+          >História<input type="checkbox" name="area" value="historia"
+        /></label>
+        <label
+          >Psicologia<input type="checkbox" name="area" value="psicologia"
+        /></label>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+    </form>
+  </body>
+</html>
